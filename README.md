@@ -2,9 +2,6 @@
  bienvenu à mon musicienne pareballe ! :violin:	
 
 
- - poste dans des categories d'articles
-
- * as tu deja entendu parler du "inner game" de la musique ? :musical_note:
 
 
 ```
