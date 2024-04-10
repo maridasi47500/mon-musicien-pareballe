@@ -4,7 +4,6 @@
 
  - poste dans des categories d'articles
 
-- et ajoute tes musicien qui sont "bulletproof" pour toi
  * as tu deja entendu parler du "inner game" de la musique ? :musical_note:
 
 

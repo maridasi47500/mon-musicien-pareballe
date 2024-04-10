@@ -1,0 +1,41 @@
+<%= form_with(model: musician) do |form| %>
+  <% if musician.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(musician.errors.count, "error") %> prohibited this musician from being saved:</h2>
+
+      <ul>
+        <% musician.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :name, style: "display: block" %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div>
+    <%= form.label :image, style: "display: block" %>
+    <%= form.file_field :image %>
+  </div>
+  <div>
+    <%= form.label :musicalinstrument_ids, style: "display: block" %>
+    <%= form.select :musicalinstrument_ids, options_for_select(Musicalinstrument.all.collect{|x|[x.name, x.id, :'data-class' => 'avatar',:'data-pic'=>"/uploads/#{x.image}", :'data-style' => "background-image: url('/uploads/#{x.image}');background-size:100% 100%;"]}), {}, {multiple:true,id: "CarId2"} %>
+   <div id="imagePreview"></div>
+  </div>
+
+  <div>
+    <%= form.hidden_field :user_id %>
+  </div>
+
+  <div>
+    <%= form.label :dateofbirth, style: "display: block" %>
+    <%= form.date_field :dateofbirth %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

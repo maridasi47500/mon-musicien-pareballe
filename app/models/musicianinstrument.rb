@@ -1,0 +1,2 @@
+class Musicianinstrument < ApplicationRecord
+end
